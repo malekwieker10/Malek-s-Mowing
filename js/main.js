@@ -12,7 +12,7 @@
      email app with the request pre-filled — which works with zero setup.
   --------------------------------------------------------------- */
   var FORM_ENDPOINT = '';
-  var CONTACT_EMAIL = 'hello@maleksmowing.com';
+  var CONTACT_EMAIL = 'maleksmowing@outlook.com';
 
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
@@ -91,7 +91,7 @@
   }
 
   /* ---------- animated stat counters ---------- */
-  var counters = $$('.stat-num');
+  var counters = $$('.stat-num[data-count]');
   function runCounter(el) {
     var target = parseInt(el.getAttribute('data-count'), 10) || 0;
     var suffix = el.getAttribute('data-suffix') || '';
@@ -120,7 +120,7 @@
     counters.forEach(function (el) { countObs.observe(el); });
   } else {
     counters.forEach(function (el) {
-      el.textContent = (el.getAttribute('data-count') || '') + (el.getAttribute('data-suffix') || '');
+      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
     });
   }
 
@@ -236,7 +236,7 @@
           note.className = 'form-note success';
         })
         .catch(function () {
-          note.textContent = 'Something went wrong. Please call or text (555) 123-4567 instead.';
+          note.textContent = 'Something went wrong. Please call or text (605) 290-3872 instead.';
           note.className = 'form-note error';
         })
         .finally(function () {

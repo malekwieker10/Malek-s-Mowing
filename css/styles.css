@@ -271,6 +271,22 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 }
 .stat-label { display: block; margin-top: .5rem; font-size: .88rem; color: var(--ink-soft); }
 
+/* ---------- how we quote ---------- */
+.how-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+.step { padding-top: .5rem; }
+.step-num {
+  display: grid; place-items: center;
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--green-700); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  margin-bottom: .9rem;
+}
+.step h3 { margin-bottom: .35rem; }
+.step p { color: var(--ink-soft); font-size: .97rem; margin: 0; }
+
 /* ---------- pricing ---------- */
 .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
 .plan { display: flex; flex-direction: column; position: relative; }
@@ -286,12 +302,14 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
   letter-spacing: .06em; text-transform: uppercase;
   padding: .3rem .85rem; border-radius: 999px; white-space: nowrap;
 }
-.plan-price {
-  font-family: var(--font-display); font-weight: 800; font-size: 2.6rem;
-  color: var(--green-800); line-height: 1; margin: .25rem 0 .5rem;
+.plan-tag {
+  display: inline-block; align-self: flex-start;
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--green-800); background: var(--green-100);
+  padding: .3rem .7rem; border-radius: 999px;
+  margin: .25rem 0 .85rem;
 }
-.plan-price .from { font-size: .85rem; font-weight: 600; color: var(--ink-soft); margin-right: .4rem; letter-spacing: 0; }
-.plan-price .per { font-size: .95rem; font-weight: 600; color: var(--ink-soft); }
 .plan-blurb { color: var(--ink-soft); font-size: .95rem; }
 .plan-list { list-style: none; padding: 0; margin: 1rem 0 1.75rem; display: grid; gap: .6rem; flex: 1; }
 .plan-list li { position: relative; padding-left: 1.5rem; font-size: .95rem; color: var(--ink-soft); }
@@ -431,6 +449,7 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 @media (max-width: 1000px) {
   .services-grid, .quotes-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+  .how-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
   .plan-featured { transform: none; }
   .hero-inner, .why-inner, .quote-inner { grid-template-columns: 1fr; }
   .hero-card { max-width: 480px; }
