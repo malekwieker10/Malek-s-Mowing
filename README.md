@@ -57,7 +57,7 @@ delete anything that doesn't:
 
 | Claim | Where |
 |---|---|
-| "Text reminder before each visit" | Hero card, pricing, Why Us |
+| "A text if weather moves us" / "text you the new time" | Why Us, FAQ |
 | "Same-day quotes" / "reply within 24 hours" | Hero card, form note |
 | "Cash, check, or Venmo" | FAQ |
 | "Priority rescheduling after storms" | Pricing |
