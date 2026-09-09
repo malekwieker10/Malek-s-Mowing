@@ -503,6 +503,9 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
   .services-grid, .quotes-grid { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .quote-form { padding: 1.5rem; }
+  /* stack before/after on phones — side by side leaves each tile ~170px wide */
+  .ba-pair { grid-template-columns: 1fr; gap: .9rem; }
+  .ba-pair + .ba-pair { margin-top: .9rem; }
   .visit-card { padding: 1.75rem 1.4rem; }
   .footer-inner { grid-template-columns: 1fr; }
 
