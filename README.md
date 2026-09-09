@@ -20,7 +20,6 @@ These are live throughout `index.html` (and `CONTACT_EMAIL` in `js/main.js`):
 - **Phone:** (605) 290-3872 — `tel:` links use `+16052903872`
 - **Email:** maleksmowing@outlook.com
 - **Service area:** Aberdeen, SD and surrounding areas
-- **Hours:** Mon–Sat, 8am–6pm
 
 ## Logo and brand colors
 
@@ -58,7 +57,7 @@ delete anything that doesn't:
 
 | Claim | Where |
 |---|---|
-| "Mon–Sat, 8am–6pm" and "7 days a week we answer" | Contact list, stats |
+| "7 days a week we answer" | Stats (Why Us section) |
 | "Text reminder before each visit" | Hero card, pricing |
 | "Same-day quotes" / "reply within 24 hours" | Hero card, form note, stats |
 | "Cash, check, or Venmo" | FAQ |
