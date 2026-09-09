@@ -76,7 +76,7 @@
 
   /* ---------- reveal on scroll ---------- */
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealTargets = $$('.section-head, .card, .visit-card, .ba, .hero-card, .check-list');
+  var revealTargets = $$('.section-head, .card, .visit-card, .ba, .work, .hero-card, .check-list');
 
   if ('IntersectionObserver' in window && !reduceMotion) {
     revealTargets.forEach(function (el) { el.classList.add('reveal'); });

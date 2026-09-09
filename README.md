@@ -68,33 +68,45 @@ comment. Don't publish invented ones.
 
 ## Photos
 
-The live before/after photos are `yard-1-before/after.jpg` and
-`yard-2-before/after.jpg`, cropped to 4:3 landscape at 1000px wide and
-compressed for the web. `hero-lawn.jpg` is a
-wide crop of the same finished lawn, kept on hand in case the hero ever moves
-to a photo background.
+All in `assets/`, cropped to 4:3 landscape at 1000x750 and compressed to
+under ~220 KB each:
 
-To add another pair, drop the originals in, process them the same way, and
-copy the `.ba-pair` block in `index.html`:
+| File | Where |
+|---|---|
+| `yard-1-before/after.jpg` | First before/after pair |
+| `yard-2-before/after.jpg` | Second before/after pair |
+| `work-1..4.jpg` | "More finished yards" grid |
+| `hero-lawn.jpg` | Hero background (1600x800, 2:1) |
+
+Two rules when adding more:
+
+1. **Crop to 4:3 before committing.** The tiles are landscape; a portrait
+   phone shot gets centre-cropped, which usually cuts the lawn in half.
+2. **Never set a pixel height in CSS on these images, and keep `height:auto`
+   in the base `img` rule.** The `width`/`height` attributes on `<img>` are
+   treated as fixed dimensions otherwise, and the aspect-ratio is ignored.
+
+To add a before/after pair, copy a `.ba-pair` block in `index.html`:
 
 ```html
 <div class="ba-pair">
   <figure class="ba">
     <span class="ba-tag">Before</span>
-    <img src="assets/yard-2-before.jpg" width="1000" height="750" loading="lazy"
+    <img src="assets/yard-3-before.jpg" width="1000" height="750" loading="lazy"
          alt="describe what the photo shows">
   </figure>
   <figure class="ba">
     <span class="ba-tag ba-tag-after">After</span>
-    <img src="assets/yard-2-after.jpg" width="1000" height="750" loading="lazy"
+    <img src="assets/yard-3-after.jpg" width="1000" height="750" loading="lazy"
          alt="describe what the photo shows">
   </figure>
 </div>
 ```
 
-Crop to 4:3 before committing — the tiles are landscape, and a portrait
-phone shot will be centre-cropped to fit. Keep photos under ~250 KB each. Phone originals are 5–10 MB and will make the
-page crawl on mobile data; always resize before committing.
+To add a finished shot, copy a `.work` figure into `.work-grid`.
+
+Phone originals are 5-10 MB. Always resize before committing, or the page
+will crawl on mobile data.
 
 ## Making the quote form actually send
 
