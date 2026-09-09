@@ -68,8 +68,9 @@ comment. Don't publish invented ones.
 
 ## Photos
 
-`assets/yard-1-before.jpg` and `yard-1-after.jpg` are the live before/after
-pair, resized to 900px wide and compressed for the web. `hero-lawn.jpg` is a
+The live before/after photos are `yard-1-before/after.jpg` and
+`yard-2-before/after.jpg`, cropped to 4:3 landscape at 1000px wide and
+compressed for the web. `hero-lawn.jpg` is a
 wide crop of the same finished lawn, kept on hand in case the hero ever moves
 to a photo background.
 
@@ -80,18 +81,19 @@ copy the `.ba-pair` block in `index.html`:
 <div class="ba-pair">
   <figure class="ba">
     <span class="ba-tag">Before</span>
-    <img src="assets/yard-2-before.jpg" width="900" height="1200" loading="lazy"
+    <img src="assets/yard-2-before.jpg" width="1000" height="750" loading="lazy"
          alt="describe what the photo shows">
   </figure>
   <figure class="ba">
     <span class="ba-tag ba-tag-after">After</span>
-    <img src="assets/yard-2-after.jpg" width="900" height="1200" loading="lazy"
+    <img src="assets/yard-2-after.jpg" width="1000" height="750" loading="lazy"
          alt="describe what the photo shows">
   </figure>
 </div>
 ```
 
-Keep photos under ~250 KB each. Phone originals are 5–10 MB and will make the
+Crop to 4:3 before committing — the tiles are landscape, and a portrait
+phone shot will be centre-cropped to fit. Keep photos under ~250 KB each. Phone originals are 5–10 MB and will make the
 page crawl on mobile data; always resize before committing.
 
 ## Making the quote form actually send

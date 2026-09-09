@@ -52,7 +52,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3 {
   font-family: var(--font-display);
@@ -355,7 +355,7 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 .ba-pair + .ba-pair { margin-top: 1.75rem; }
 .ba { position: relative; margin: 0; }
 .ba img {
-  width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+  width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
