@@ -49,11 +49,10 @@ Buttons use **black text on the green**, not white. The logo green is bright
 enough that white text on it fails readability standards (2.9:1); black on it
 is very legible (7.3:1). Same green, and it looks closer to the logo.
 
-## Still to confirm
+## Promises made on the page
 
-A handful of claims are ordinary marketing copy, but they are promises to
-customers — check each one still matches how you actually operate, and edit or
-delete anything that doesn't:
+These are confirmed as accurate as of September 2026. If how you operate
+changes, these are the lines to revisit:
 
 | Claim | Where |
 |---|---|
@@ -61,6 +60,8 @@ delete anything that doesn't:
 | "Same-day quotes" / "reply within 24 hours" | Hero card, form note |
 | "Cash, check, or Venmo" | FAQ |
 | "Priority rescheduling after storms" | Pricing |
+
+No business hours are advertised anywhere, deliberately.
 
 The **Reviews section is commented out** in `index.html`. Turn it on once you
 have real customer quotes and their permission — the instructions are in the
