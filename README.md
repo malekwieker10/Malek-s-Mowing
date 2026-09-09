@@ -22,6 +22,34 @@ These are live throughout `index.html` (and `CONTACT_EMAIL` in `js/main.js`):
 - **Service area:** Aberdeen, SD and surrounding areas
 - **Hours:** Mon–Sat, 8am–6pm
 
+## Logo and brand colors
+
+Both logo versions you supplied are in `assets/`, trimmed and optimized:
+
+| File | Used for |
+|---|---|
+| `logo-light.png` | Full lockup on white (spare — not currently placed) |
+| `logo-dark.png` | Footer, on black |
+| `mark-light.png` | The M mark in the header |
+| `mark-dark.png` | Spare, for dark backgrounds |
+| `icon-180.png`, `favicon.ico` | Browser tab and phone home-screen icon |
+| `og-image.png` | Preview image when the link is shared (Facebook, texts) |
+
+The palette is sampled straight from the logo and lives at the top of
+`css/styles.css`:
+
+| Token | Value | Role |
+|---|---|---|
+| `--brand` | `#69A91D` | The logo green. Buttons, accents, marks on black. |
+| `--brand-mid` | `#5E9A18` | Large green text on white |
+| `--green-700` | `#4E7F14` | Small green text, and green that carries white text |
+| `--green-900` / `--ink` | `#101310` | Near-black: headings and dark sections |
+| `--brand-lift` | `#7CC022` | Button hover |
+
+Buttons use **black text on the green**, not white. The logo green is bright
+enough that white text on it fails readability standards (2.9:1); black on it
+is very legible (7.3:1). Same green, and it looks closer to the logo.
+
 ## Still to confirm
 
 A handful of claims are ordinary marketing copy, but they are promises to
