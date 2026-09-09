@@ -503,9 +503,10 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
   .services-grid, .quotes-grid { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .quote-form { padding: 1.5rem; }
-  /* stack before/after on phones — side by side leaves each tile ~170px wide */
-  .ba-pair { grid-template-columns: 1fr; gap: .9rem; }
-  .ba-pair + .ba-pair { margin-top: .9rem; }
+  /* keep before and after side by side on phones so the pair still reads as a pair */
+  .ba-pair { gap: .5rem; }
+  .ba-pair + .ba-pair { margin-top: .5rem; }
+  .ba-tag { top: .45rem; left: .45rem; font-size: .6rem; padding: .22rem .5rem; letter-spacing: .06em; }
   .visit-card { padding: 1.75rem 1.4rem; }
   .footer-inner { grid-template-columns: 1fr; }
 
