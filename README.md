@@ -63,6 +63,10 @@ changes, these are the lines to revisit:
 
 No business hours are advertised anywhere, deliberately.
 
+**The site does not claim to be insured**, because the business isn't yet.
+Don't add an "Insured" badge, a licensed-and-insured line, or similar until
+that's actually true — it's the kind of claim customers rely on.
+
 The **Reviews section is commented out** in `index.html`. Turn it on once you
 have real customer quotes and their permission — the instructions are in the
 comment. Don't publish invented ones.
