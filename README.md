@@ -66,26 +66,33 @@ The **Reviews section is commented out** in `index.html`. Turn it on once you
 have real customer quotes and their permission — the instructions are in the
 comment. Don't publish invented ones.
 
-## Add real photos
+## Photos
 
-The gallery currently uses CSS color blocks as stand-ins. Before/after shots of
-your own work are the single highest-impact change you can make to this page.
+`assets/yard-1-before.jpg` and `yard-1-after.jpg` are the live before/after
+pair, resized to 900px wide and compressed for the web. `hero-lawn.jpg` is a
+wide crop of the same finished lawn, kept on hand in case the hero ever moves
+to a photo background.
 
-1. Put images in `assets/` (JPG, resized to ~1600px wide, under ~300 KB each).
-2. In `index.html`, replace each figure:
+To add another pair, drop the originals in, process them the same way, and
+copy the `.ba-pair` block in `index.html`:
 
 ```html
-<figure class="shot shot-a">
-  <img src="assets/yard-1.jpg" alt="Freshly mowed front lawn with crisp edging">
-  <figcaption>Weekly residential cut</figcaption>
-</figure>
+<div class="ba-pair">
+  <figure class="ba">
+    <span class="ba-tag">Before</span>
+    <img src="assets/yard-2-before.jpg" width="900" height="1200" loading="lazy"
+         alt="describe what the photo shows">
+  </figure>
+  <figure class="ba">
+    <span class="ba-tag ba-tag-after">After</span>
+    <img src="assets/yard-2-after.jpg" width="900" height="1200" loading="lazy"
+         alt="describe what the photo shows">
+  </figure>
+</div>
 ```
 
-3. Add to `css/styles.css`:
-
-```css
-.shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-```
+Keep photos under ~250 KB each. Phone originals are 5–10 MB and will make the
+page crawl on mobile data; always resize before committing.
 
 ## Making the quote form actually send
 
