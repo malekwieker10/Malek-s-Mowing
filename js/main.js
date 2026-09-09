@@ -76,7 +76,7 @@
 
   /* ---------- reveal on scroll ---------- */
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealTargets = $$('.section-head, .card, .stat, .shot, .hero-card, .check-list');
+  var revealTargets = $$('.section-head, .card, .visit-card, .shot, .hero-card, .check-list');
 
   if ('IntersectionObserver' in window && !reduceMotion) {
     revealTargets.forEach(function (el) { el.classList.add('reveal'); });
@@ -88,40 +88,6 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     revealTargets.forEach(function (el) { revealer.observe(el); });
-  }
-
-  /* ---------- animated stat counters ---------- */
-  var counters = $$('.stat-num[data-count]');
-  function runCounter(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-    var suffix = el.getAttribute('data-suffix') || '';
-    if (reduceMotion) { el.textContent = target + suffix; return; }
-
-    var duration = 1100;
-    var start = null;
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  if ('IntersectionObserver' in window && counters.length) {
-    var countObs = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        runCounter(entry.target);
-        obs.unobserve(entry.target);
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { countObs.observe(el); });
-  } else {
-    counters.forEach(function (el) {
-      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
-    });
   }
 
   /* ---------- quote form ---------- */

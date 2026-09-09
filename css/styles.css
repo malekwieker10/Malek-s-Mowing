@@ -266,17 +266,41 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
   display: grid; place-items: center; font-size: .8rem; font-weight: 700;
 }
 
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.stat {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.6rem 1.25rem; text-align: center; box-shadow: var(--shadow-sm);
+/* the "every visit" card — black, to echo the logo */
+.visit-card {
+  background: #000;
+  color: rgba(255,255,255,.82);
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-lg);
 }
-.stat-num {
-  display: block;
-  font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4vw, 2.6rem);
-  color: var(--green-700); line-height: 1;
+.visit-card h3 {
+  color: #fff; font-size: 1.35rem;
+  padding-bottom: 1rem; margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,.14);
 }
-.stat-label { display: block; margin-top: .5rem; font-size: .88rem; color: var(--ink-soft); }
+.visit-list {
+  list-style: none; counter-reset: visit;
+  padding: 0; margin: 0; display: grid; gap: 1rem;
+}
+.visit-list li {
+  counter-increment: visit;
+  position: relative; padding-left: 2.6rem;
+  font-size: 1rem; line-height: 1.5;
+}
+.visit-list li::before {
+  content: counter(visit);
+  position: absolute; left: 0; top: -1px;
+  width: 26px; height: 26px; border-radius: 8px;
+  background: var(--brand); color: var(--ink);
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 800; font-size: .82rem;
+}
+.visit-note {
+  margin: 1.5rem 0 0; padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,.14);
+  font-size: .9rem; color: rgba(255,255,255,.6);
+}
 
 /* ---------- how we quote ---------- */
 .how-grid {
@@ -484,9 +508,9 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
   .nav-toggle { display: flex; }
 
   .services-grid, .quotes-grid { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: 1fr 1fr; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .quote-form { padding: 1.5rem; }
+  .visit-card { padding: 1.75rem 1.4rem; }
   .footer-inner { grid-template-columns: 1fr; }
 
   .call-fab { display: flex; }

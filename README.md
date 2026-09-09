@@ -57,11 +57,9 @@ delete anything that doesn't:
 
 | Claim | Where |
 |---|---|
-| "7 days a week we answer" | Stats (Why Us section) |
-| "Text reminder before each visit" | Hero card, pricing |
-| "Same-day quotes" / "reply within 24 hours" | Hero card, form note, stats |
+| "Text reminder before each visit" | Hero card, pricing, Why Us |
+| "Same-day quotes" / "reply within 24 hours" | Hero card, form note |
 | "Cash, check, or Venmo" | FAQ |
-| "100% satisfaction guarantee" | Stats |
 | "Priority rescheduling after storms" | Pricing |
 
 The **Reviews section is commented out** in `index.html`. Turn it on once you
