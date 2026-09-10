@@ -6,12 +6,12 @@
   'use strict';
 
   /* ---- CONFIG -------------------------------------------------
-     Paste a form endpoint here to have quote requests emailed to
-     you automatically (e.g. a Formspree URL: https://formspree.io/f/xxxxxxx).
-     Leave it empty and the form falls back to opening the visitor's
-     email app with the request pre-filled — which works with zero setup.
+     FORM_ENDPOINT receives quote requests and emails them to
+     CONTACT_EMAIL. Clearing it falls back to opening the visitor's own
+     email app with the request pre-filled, which needs no setup but
+     silently loses anyone whose device has no mail app configured.
   --------------------------------------------------------------- */
-  var FORM_ENDPOINT = '';
+  var FORM_ENDPOINT = 'https://formspree.io/f/xbgjqqvq';
   var CONTACT_EMAIL = 'maleksmowing@outlook.com';
 
   var $  = function (s, c) { return (c || document).querySelector(s); };
@@ -174,6 +174,7 @@
 
       var data = {};
       inputs.forEach(function (input) { data[input.name] = input.value.trim(); });
+      data._subject = 'Estimate request — ' + data.name + ' (' + data.address + ')';
 
       var button = form.querySelector('button[type="submit"]');
 

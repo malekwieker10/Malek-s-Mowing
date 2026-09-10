@@ -169,24 +169,22 @@ rating and review count near the top of their pages.
 Deliberately not offered. Worth revisiting only if that changes: a winter
 service keeps customer relationships alive year-round.
 
-## Making the quote form actually send
+## The quote form
 
-Out of the box the form validates and then opens the visitor's email app with
-the request pre-filled, addressed to maleksmowing@outlook.com — no setup, works
-immediately. The catch: it depends on the visitor having an email app set up,
-so some people will bail. Wiring up an endpoint (below) is worth the five
-minutes.
+Requests go through Formspree (`https://formspree.io/f/xbgjqqvq`, set as
+`FORM_ENDPOINT` at the top of `js/main.js`) and arrive by email at
+maleksmowing@outlook.com. The subject line carries the customer's name and
+address. The form submits in the background and shows a confirmation inline.
 
-To have requests emailed to you automatically instead:
+If Formspree is ever unreachable, the visitor sees an error asking them to
+call or text instead. Clearing `FORM_ENDPOINT` reverts to the old behaviour:
+the form opens the visitor's own email app with the request pre-filled.
 
-1. Create a free form endpoint (e.g. [Formspree](https://formspree.io)).
-2. Open `js/main.js` and set the URL at the top:
+**Test it after any change to the form** — submit a real request and confirm
+it lands. A silently broken form loses jobs without any sign that it has.
 
-```js
-var FORM_ENDPOINT = 'https://formspree.io/f/your-form-id';
-```
-
-The form then submits in the background and shows a success message inline.
+Planned: repoint this at a Jobber work request once that account exists, so
+requests land in the job list rather than an inbox.
 
 ## Publishing
 
