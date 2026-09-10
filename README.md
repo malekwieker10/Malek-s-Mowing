@@ -176,7 +176,10 @@ If Formspree is ever unreachable, the visitor sees an error asking them to
 call or text instead. Clearing `FORM_ENDPOINT` reverts to the old behaviour:
 the form opens the visitor's own email app with the request pre-filled.
 
-**Test it after any change to the form** — submit a real request and confirm
+Verified working end to end on 10 September 2026: a submission from the live
+site arrived in the inbox.
+
+**Re-test after any change to the form** — submit a real request and confirm
 it lands. A silently broken form loses jobs without any sign that it has.
 
 If the business later runs on scheduling software, repoint this at that
