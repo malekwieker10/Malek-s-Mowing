@@ -51,8 +51,8 @@ is very legible (7.3:1). Same green, and it looks closer to the logo.
 
 ## Promises made on the page
 
-These are confirmed as accurate as of September 2026. If how you operate
-changes, these are the lines to revisit:
+Confirmed accurate. If how the business operates changes, these are the
+lines to revisit:
 
 | Claim | Where |
 |---|---|
@@ -63,9 +63,9 @@ changes, these are the lines to revisit:
 
 No business hours are advertised anywhere, deliberately.
 
-**The site does not claim to be insured**, because the business isn't yet.
-Don't add an "Insured" badge, a licensed-and-insured line, or similar until
-that's actually true — it's the kind of claim customers rely on.
+**No insurance claim appears anywhere on the site.** Don't add an "Insured"
+badge or a licensed-and-insured line unless it is verified and current — it's
+the kind of claim customers rely on.
 
 The **Reviews section is commented out** in `index.html`. Turn it on once you
 have real customer quotes and their permission — the instructions are in the
@@ -133,41 +133,37 @@ beat finished ones here, since the card is about the work, not the result:
 Can be done piecemeal: photos on the cards that have them, icons on the rest.
 Crop to 4:3 and keep each under ~200 KB, same as the gallery photos.
 
-### Jobber integration (planned for the 2027 season)
+### Field-service software integration
 
-The plan is to run the business on Jobber. Keep this site as the public
-face and use Jobber for operations — its own generated site is a generic
-template, and the domain should stay pointed here.
+If the business moves onto a scheduling/invoicing platform (Jobber or
+similar), keep this site as the public face and point the domain here rather
+than at the platform's generated site.
 
-Three things to wire up once the account exists:
+Three things to wire up at that point:
 
-1. **Quote form → Jobber work request.** Point the form at the Jobber
-   request link, or embed it. This replaces the mailto fallback in
-   `js/main.js`, so requests land in the job list instead of an inbox.
-2. **Client Login link** in the header, for quote approval and invoices.
-3. **Online payment**, which is the real gap against local competitors
-   right now.
-
-Do not let Jobber take over the domain. Link out to it from here.
+1. **Quote form → work request.** Repoint `FORM_ENDPOINT` in `js/main.js`
+   at the platform's request link so submissions land in the job list.
+2. **Client login link** in the header, for quote approval and invoices.
+3. **Online payment.**
 
 ### An About section
 
-Still the biggest gap against local competitors, both of whom name their
-owner. A few sentences on who runs the business and how it started, ideally
-with a photo of the owner or the truck. Nothing on the site currently shows
-a person.
+A few sentences on who runs the business and how it started, ideally with a
+photo of the owner or the truck. Nothing on the site currently shows a
+person, and for a service where someone is coming onto your property, that
+matters more than any other single addition.
 
 ### Reviews on the page
 
 The reviews section links out to the Google profile. Once there are several
 reviews, pulling two or three onto the page as quotes — with names, and with
-permission — would land harder than a button. Competitors display a star
-rating and review count near the top of their pages.
+permission — would land harder than a button alone.
 
-### Snow removal
+### Winter services
 
-Deliberately not offered. Worth revisiting only if that changes: a winter
-service keeps customer relationships alive year-round.
+Not offered, and deliberately absent from the site. If that ever changes,
+a winter service is worth adding here — it keeps customer relationships
+alive year-round rather than restarting each spring.
 
 ## The quote form
 
@@ -183,8 +179,8 @@ the form opens the visitor's own email app with the request pre-filled.
 **Test it after any change to the form** — submit a real request and confirm
 it lands. A silently broken form loses jobs without any sign that it has.
 
-Planned: repoint this at a Jobber work request once that account exists, so
-requests land in the job list rather than an inbox.
+If the business later runs on scheduling software, repoint this at that
+platform's work-request link so submissions land in the job list.
 
 ## Publishing
 
