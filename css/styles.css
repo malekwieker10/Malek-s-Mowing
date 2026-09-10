@@ -245,6 +245,9 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 
 /* ---------- services ---------- */
 .services-grid { grid-template-columns: repeat(3, 1fr); }
+/* a lone card on the last row sits in the middle rather than off to one side */
+.services-grid > :last-child:nth-child(3n + 1) { grid-column: 2; }
+
 .service { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .service:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-500); }
 .service-icon {
