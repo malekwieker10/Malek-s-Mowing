@@ -252,9 +252,11 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 .service:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-500); }
 .service-icon {
   width: 52px; height: 52px; border-radius: 14px;
-  display: grid; place-items: center; font-size: 1.5rem;
-  background: var(--green-100); margin-bottom: 1.1rem;
+  display: grid; place-items: center;
+  background: var(--green-100); color: var(--green-800);
+  margin-bottom: 1.1rem;
 }
+.service-icon svg { width: 26px; height: 26px; }
 .service p { color: var(--ink-soft); margin: 0; font-size: .97rem; }
 
 /* ---------- why ---------- */
@@ -434,8 +436,10 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 .contact-list a:hover { text-decoration: underline; }
 .ci {
   width: 38px; height: 38px; flex: none; border-radius: 10px;
-  background: rgba(255,255,255,.1); display: grid; place-items: center; font-size: 1rem;
+  background: rgba(255,255,255,.1); display: grid; place-items: center;
+  color: var(--brand);
 }
+.ci svg { width: 19px; height: 19px; }
 
 .quote-form { padding: 2rem; }
 .field { display: grid; gap: .4rem; margin-bottom: 1.1rem; }
