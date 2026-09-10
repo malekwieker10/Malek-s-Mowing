@@ -113,6 +113,45 @@ To add a finished shot, copy a `.work` figure into `.work-grid`.
 Phone originals are 5-10 MB. Always resize before committing, or the page
 will crawl on mobile data.
 
+## Ideas not yet done
+
+### Photos on the service cards
+
+The six service cards currently use drawn icons. Photos of the actual work
+would be stronger. Needs one good landscape shot per service — action shots
+beat finished ones here, since the card is about the work, not the result:
+
+| Service | Shot to get |
+|---|---|
+| Lawn Mowing | The mower mid-cut, stripes laying down behind it |
+| Trimming & Edging | Trimmer working a fence line, or a close-up of a fresh edge |
+| Spring & Fall Cleanup | Leaf pile, blower going, or a loaded trailer |
+| Dethatching | The machine working, or the piles of thatch pulled out |
+| Mulching & Beds | Fresh dark mulch against green grass with a cut edge |
+| Property Cleanups | An overgrown lot halfway cut — mess on one side, clean on the other |
+
+Can be done piecemeal: photos on the cards that have them, icons on the rest.
+Crop to 4:3 and keep each under ~200 KB, same as the gallery photos.
+
+### An About section
+
+Still the biggest gap against local competitors, both of whom name their
+owner. A few sentences on who runs the business and how it started, ideally
+with a photo of the owner or the truck. Nothing on the site currently shows
+a person.
+
+### Reviews on the page
+
+The reviews section links out to the Google profile. Once there are several
+reviews, pulling two or three onto the page as quotes — with names, and with
+permission — would land harder than a button. Competitors display a star
+rating and review count near the top of their pages.
+
+### Snow removal
+
+Deliberately not offered. Worth revisiting only if that changes: a winter
+service keeps customer relationships alive year-round.
+
 ## Making the quote form actually send
 
 Out of the box the form validates and then opens the visitor's email app with
