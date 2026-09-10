@@ -395,7 +395,7 @@ a { color: var(--green-700); text-decoration-thickness: 1.5px; text-underline-of
 /* ---------- testimonials ---------- */
 .quotes-grid { grid-template-columns: repeat(3, 1fr); }
 .quote { margin: 0; display: flex; flex-direction: column; }
-.stars { color: var(--sun); letter-spacing: .12em; margin-bottom: .75rem; }
+.reviews-btn { margin-top: 1.75rem; }
 .quote p { font-size: 1.02rem; color: var(--ink); flex: 1; }
 .quote footer { font-size: .9rem; color: var(--ink-soft); font-style: normal; }
 
