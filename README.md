@@ -20,6 +20,7 @@ These are live throughout `index.html` (and `CONTACT_EMAIL` in `js/main.js`):
 - **Phone:** (605) 290-3872 — `tel:` links use `+16052903872`
 - **Email:** maleksmowing@outlook.com
 - **Service area:** Aberdeen, SD and surrounding areas
+- **Domain:** maleksmowing.com (GoDaddy, registered through 2029)
 
 ## Logo and brand colors
 
@@ -187,13 +188,13 @@ platform's work-request link so submissions land in the job list.
 
 ## Publishing
 
-**GitHub Pages** (free, works with this repo as-is):
-Repo → Settings → Pages → Source: *Deploy from a branch* → pick `main`,
-folder `/ (root)` → Save. Live in a minute or two at
-`https://malekwieker10.github.io/Malek-s-Mowing/`.
+The site is live at **https://maleksmowing.com**, served by GitHub Pages
+from the `main` branch. Any push to `main` republishes within a minute or so.
 
-To use your own domain, add a `CNAME` file at the repo root containing just
-`maleksmowing.com`, then point the domain's DNS at GitHub Pages.
+DNS lives at GoDaddy: four `A` records on `@` pointing at GitHub Pages
+(185.199.108–111.153) and a `CNAME` on `www` pointing at
+`malekwieker10.github.io`. The `CNAME` file at the repo root holds the custom
+domain — **don't delete it**, or the site falls back to the github.io address.
 
 **Netlify / Cloudflare Pages:** drag the folder in, or connect the repo. No
 build command, publish directory `/`.
