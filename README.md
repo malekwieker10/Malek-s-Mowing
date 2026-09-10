@@ -133,6 +133,23 @@ beat finished ones here, since the card is about the work, not the result:
 Can be done piecemeal: photos on the cards that have them, icons on the rest.
 Crop to 4:3 and keep each under ~200 KB, same as the gallery photos.
 
+### Jobber integration (planned for the 2027 season)
+
+The plan is to run the business on Jobber. Keep this site as the public
+face and use Jobber for operations — its own generated site is a generic
+template, and the domain should stay pointed here.
+
+Three things to wire up once the account exists:
+
+1. **Quote form → Jobber work request.** Point the form at the Jobber
+   request link, or embed it. This replaces the mailto fallback in
+   `js/main.js`, so requests land in the job list instead of an inbox.
+2. **Client Login link** in the header, for quote approval and invoices.
+3. **Online payment**, which is the real gap against local competitors
+   right now.
+
+Do not let Jobber take over the domain. Link out to it from here.
+
 ### An About section
 
 Still the biggest gap against local competitors, both of whom name their
